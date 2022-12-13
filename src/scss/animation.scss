@@ -1,0 +1,24 @@
+@keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(45px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(60px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }

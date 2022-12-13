@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'variables';
+@import 'animation';
 
 
 html, body {
@@ -24,6 +25,8 @@ html, body {
 .header {
     display: block;
     width: 100%;
+    padding-top: 5px;
+    padding-bottom: 15px;
 }
 
 .header__container{
@@ -81,3 +84,204 @@ html, body {
             padding-right: 0;
         }
 }
+
+// MAIN
+
+.first-section {
+    position: relative;
+    background-image: linear-gradient( 90deg, rgb(247,248,252) 0%, rgb(250,250,252) 100%);
+
+        &__btn {
+            position: absolute;
+            bottom: 40px;
+            left:50%;
+            transform: translate(-50%, 0); 
+        }
+}
+
+.squre {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 174px;
+        &__item {
+            width: 174px;
+            height: 174px;
+            position: absolute;
+            background-color: #fff;
+            color:#e6eaf3;
+            font-size: 34px;
+            font-weight: 700;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            -webkit-box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
+            -moz-box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
+            box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
+            opacity: 0.5;
+        }
+
+        &_left {
+            left:0
+        }
+
+        &_right {
+            right:0
+        }
+}
+
+.squre_left .squre__item:nth-child(1){
+    top:20px;
+    transform: translate(40%, 0);
+}
+
+.squre_left .squre__item:nth-child(2){
+    top: 50%;
+    transform: translate(10%, -50%);
+
+}
+
+.squre_left .squre__item:nth-child(3){
+    bottom:0;
+    transform: translate(100%, 0);
+}
+
+.squre_right .squre__item:nth-child(1){
+    top:20px;
+    transform: translate(-40%, 0);
+}
+
+.squre_right .squre__item:nth-child(2){
+    top: 50%;
+    transform: translate(-10%, -50%);
+}
+
+.squre_right .squre__item:nth-child(3){
+    bottom:0;
+    transform: translate(-100%, 0);
+}
+
+
+.main-title {
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 60px 0 50px 0;
+}
+
+.first-section__animation-arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.call-to-action {
+    color: $color-active;
+    text-align: center;
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.chevron{
+    position: relative;
+    height: 28px;
+    width: 28px;
+}
+
+.chevron__item {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron__item:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron__item:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron__item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/arrow.svg) no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+  }
+
+
+
+// MAIN CONTENT
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+.main-content__left, .main-content__right {
+    position: absolute;
+    width: 430px;
+    display: flex;
+}
+
+.main-content__left {
+    left: 0;
+    justify-content: flex-start;
+        img {
+            position: absolute;
+            right:0;
+            top:30px
+        }
+    
+}
+
+.main-content__right {
+    right: 0;
+    justify-content: flex-end;
+        img  {
+            position: absolute;
+            left:0;
+            top:-10px;
+        }
+}
+
+.main-content__title {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+// BTN
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 214px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 13px 10px 22px 8px rgba(218, 202, 202, 0.5);
+        &_primary {
+            background:  linear-gradient( 48deg, rgb(244,53,62) 0%, rgb(251,76,84) 100%);
+            text-shadow: 0.819px 0.574px 3px rgba(170, 69, 29, 0.36);
+        }
+}
+
+
+
