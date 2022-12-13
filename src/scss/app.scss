@@ -1,12 +1,83 @@
 @import 'reset';
+@import 'variables';
 
 
 html, body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-basic;
     font-size: 10px;
     font-weight: 400;
     height: 100%;
-    max-width: 320px;
+    min-width: 320px;
     position: relative;
-    color: #2b2b2b;
+    color: $color-main;
+}
+
+.container {
+    width: 100%;
+    max-width: 1147px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+// HEADER
+
+.header {
+    display: block;
+    width: 100%;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+    width: 100%;
+    max-width: 260px;
+}
+
+.munu {
+    display: flex;
+    width: auto;
+    flex: 1 0 100%;
+    justify-content: center;
+}
+
+.header__menu {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+.menu__link {
+    font-size: 19px;
+    font-weight: 400;
+    color: $color-main;
+}
+
+.menu__link:hover {
+    color: $color-active;
+}
+
+.social-link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+        &.social-link_inst {
+           background: url(../images/instagram.png); 
+        }
+}
+
+.munu__item {
+    padding: 0 3%;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
 }
