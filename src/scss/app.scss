@@ -358,8 +358,8 @@ html, body {
 .presentation{
     background-color: #fafafc;
     position: relative;
-
     padding: 120px 0 50px 0;
+
     &__title {
         color: $color-active;
         text-transform:uppercase;
@@ -401,8 +401,31 @@ html, body {
     text-align: center;
 }
 
+.text-label_coffe {
+    position: relative;
+    overflow:visible;
+    margin-bottom: 180px;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 80px;
+            background: url(../images/coffee1.png) no-repeat;
+            bottom: -1px;
+            left: 0;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 314px;
+            height: 141px;
+            background: url(../images/coffee2bg.png) no-repeat;
+            bottom: -80px;
+            left: -30px;
+        }
+}
+
 .image-label {
-   
     width: 208px;
     height: 208px;
     position: relative;
@@ -447,30 +470,26 @@ html, body {
     flex-direction: column;
     right: 0;
     top:0;
-    width: 35%;
+    width: 40%;
     height: 100%;
-    img {
-        position: absolute;
-        right: 0;
-    }
-
-    > * {
-        position: relative;
-
-            &:first-child {
-                flex: 0 0 42%;
-                 img {
-                    bottom: 0;
-                 }
-            }
-            &:last-child {
-                flex: 0 0 58%;
-                img {
-                    top: 0;
+    background: url(../images/circle-up_full.png) no-repeat right center;
+    background-size: contain;
+        img {
+            position: absolute;
+            bottom:0;
+        }
+        > * {
+            position: relative;
+                &:first-child {
+                    flex: 0 0 42%;
                 }
-            }
-       }
+                
+                &:last-child {
+                    flex: 0 0 58%;
+                }
+        }
 }
+
 .presentation__aerofon {
     position: absolute;
     z-index: 2;
