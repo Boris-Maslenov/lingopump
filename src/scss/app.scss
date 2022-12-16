@@ -278,10 +278,24 @@ html, body {
     font-size: 20px;
     font-weight: 700;
     border-radius: 5px;
-    box-shadow: 13px 10px 22px 8px rgba(218, 202, 202, 0.5);
+    transition: all .3s;
+
         &_primary {
             background:  linear-gradient( 48deg, rgb(244,53,62) 0%, rgb(251,76,84) 100%);
-            text-shadow: 0.819px 0.574px 3px rgba(170, 69, 29, 0.36);
+            text-shadow: 1px 1px 3px rgba(170, 69, 29, 0.36);
+            box-shadow: 13px 10px 22px 8px rgba(218, 202, 202, 0.5);
+                &:hover{
+                    background: linear-gradient(48deg, #f4353e 0%, #eb333b 100%)
+                }
+        }
+        &_secondary {
+            box-shadow:0px 4px 13px 0px rgba(41,74,134,0.3);
+            text-shadow: 1px 1px 6px rgba(0, 18, 63, 0.1);
+            background-color: $color-active;
+            color:#fff;
+                &:hover {
+                    background-color: #2c5195;
+                }
         }
 }
 
@@ -531,7 +545,7 @@ html, body {
 
 .friend {
   background: linear-gradient(0deg, #f6f8fc 0%, #fafafc 100%);
-  padding: 70px 0;
+  padding: 70px 0 0;
 }
 
 .friend-info {
@@ -660,6 +674,7 @@ html, body {
 .theme-list{
     display: flex;
     &__item {
+        cursor: pointer;
         margin: 0 7px;
         font-size: 20px;
     }
@@ -690,7 +705,65 @@ html, body {
 
 .swiper-slide {
     width: auto;
-  }
+}
+
+.plans {
+    background: #f6f8fc;
+    padding-bottom: 50px;
+}
+
+.plans__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+        & > * {
+            flex: 0 1 auto;
+            width: calc(100% / 3);
+            max-width: 345px;
+        }
+}
+
+.plan-label {
+
+    &__header{
+        // background-color: $color-red;
+        background: linear-gradient(31deg, #fb4c54 0%, #f4353e 100%);
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 1px 1px 6px rgba(0, 18, 63, 0.1);
+        border-radius: 1px;
+        text-align: center;
+        padding: 22px 0;
+    }
+    &__footer{
+        display: flex;
+        justify-content: center;
+    }
+    &__body{
+      padding: 75px 25px 40px 25px;
+    }
+    &__after-price{
+        font-size: 18px;
+         span {
+            font-weight: 600;
+            font-size: 20px;
+            color: $color-active;
+         }
+    }
+}
+
+.price-block {
+    font-weight: 900;
+    font-size: 45px;
+    color: #256dbd;
+    border: 2px dashed #c7e0fe;
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 
 
