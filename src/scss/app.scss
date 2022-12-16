@@ -272,6 +272,8 @@ html, body {
     align-items: center;
     width: 100%;
     max-width: 214px;
+    outline: none!important;
+    border: none;
     padding: 20px 0;
     text-transform: uppercase;
     color: #fff;
@@ -746,6 +748,8 @@ border-radius: 15px;
     }
     &__after-price{
         font-size: 18px;
+        display: block;
+        text-align: center;
             span {
                 font-weight: 600;
                 font-size: 20px;
@@ -791,7 +795,7 @@ border-radius: 15px;
             width: 100%;
             max-width: 810px;
             margin: 0 auto;
-            padding: 70px 0 30px 0;
+            padding: 30px 0 30px 0;
                 & > * {
                     flex: 1 0 0%;
                 }
@@ -810,6 +814,142 @@ border-radius: 15px;
         }
 }
 
+.pay {
+    background: #f6f8fc;
+    padding: 30px 0;
+    &__inner {
+        box-shadow:0px 0px 22px 0px rgba(53,89,156,0.15);
+        background: #fff;
+    }
+    &__cards {
+        margin-top: 15px;
+    }
+}
 
+.lang-display{
+    padding: 15px;
+    border-top: 2px solid #FFF;
+    background-color: $color-items-hover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-language{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+        &__name{
+            color: $color-red;
+            padding: 0 12px;
+        }
+        &__pic{
+            max-width: 28px;
+        }
+}
+
+.choose__form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 662px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.form {
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item{
+        flex: 0 0 auto;
+        width: 50%;
+        margin-bottom: 20px;
+
+            &_full{
+                width: 100%;
+            }
+    }
+
+
+    &__input{
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 20px);
+        border: 1px solid #e9ebf1;
+        font-size: 18px;
+        padding: 13px 0 13px 10px;
+        position: relative;
+        background-color: #FFF;
+            &_option {
+                background: #fff;
+                appearance: none;
+                background: url(../images/strelka.png) no-repeat right center;
+                background-clip: border-box;
+            }
+    }
+
+    &__label {
+        color: #38475d;
+        font-size: 18px;
+        line-height: 1.5;
+
+    }
+
+    &__checked{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #38475d;
+        font-size: 16px;
+         & > span {
+            display: block;
+            margin-left: 10px;
+                & > a {
+                    text-decoration: underline;
+                }
+         }
+    }
+    
+}
+
+
+.check {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+        &>input {
+            display: none;
+        }
+        &>span {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border: 1px solid #e9ebf1;    
+        }
+
+        &>input:checked+span:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background: url(../images/arrow.svg) no-repeat center center;
+            background-size: 6px;
+            transform: rotate(90deg);
+        }
+}
 
 
