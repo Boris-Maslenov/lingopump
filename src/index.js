@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const swiper = new Swiper('.select-friend', {
+        // init: false,
         slidesPerView: 'auto',
         // centeredSlides: true,
         spaceBetween: 60,
         // freeMode: true,
     });
+
+    //swiper.init();
 
 });

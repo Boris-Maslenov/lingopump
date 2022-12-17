@@ -71,7 +71,15 @@ html, body {
     background-repeat: no-repeat;
     background-size: 100%;
         &.social-link_inst {
-           background: url(../images/instagram.png); 
+           background: url(../images/instagram.png) no-repeat; 
+        }
+        &_text {
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+                &:hover {
+                    cursor: pointer;  
+                }
         }
 }
 
@@ -350,6 +358,7 @@ html, body {
     align-items:  center;
     justify-content: stretch;
     padding: 27px 0;
+    user-select: none;
         &:last-child{
             border-top-right-radius: 12px;
             border-bottom-right-radius: 12px;
@@ -553,13 +562,16 @@ html, body {
 .friend-info {
     display: inline-block;
     text-align: center;
+
     &__avatar{
         max-width: 174px;
         border-radius: 100%;
         display: block;
         box-shadow:0px 6px 11px 0px rgba(168,192,217,0.8);
         margin-bottom: 20px;
+        // position: relative;
     }
+
     &__name, &__level {
         font-size: 21px;
         display: block;
@@ -568,8 +580,39 @@ html, body {
     }
     
     &__level {
-        color: $color-red;
+        // color: $color-red;
+        color: #b2b2b2;
         font-weight: 400;
+    }
+    &__status{
+        position: relative;
+            &::before {
+                content: '';
+                width: calc(100% + 5px);
+                height: calc(100% + 5px);
+                position: absolute;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 50%;
+                border-radius: 100%;
+                border: 2px dashed #fb4c54;
+                z-index: 1;
+                transition: all 0.5s;
+                opacity: 0;
+            }
+        &_active::before {
+                opacity: 1;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+            .friend-info__level {
+                color: $color-red;
+            }
+            .friend-info__status::before {
+                opacity: 1;
+            }
     }
 }
 
@@ -660,18 +703,19 @@ border-radius: 15px;
         display: flex;
 
     &__item{
+        user-select: none;
         font-size: 20px;
         text-transform: uppercase;
         margin: 0 7px;
         padding: 5px;
-        &:hover {
-            background-color: $color-items-hover;
-            cursor: pointer;
-        }
-        &_active{
-            color:$color-red;
-            font-weight: 600;
-        }
+            &:hover {
+                background-color: $color-items-hover;
+                cursor: pointer;
+            }
+            &_active{
+                color:$color-red;
+                font-weight: 600;
+            }
     }
 }
 
@@ -681,6 +725,7 @@ border-radius: 15px;
         cursor: pointer;
         margin: 0 7px;
         font-size: 20px;
+        user-select: none;
     }
 }
 
@@ -734,7 +779,8 @@ border-radius: 15px;
         font-weight: 700;
         text-transform: uppercase;
         color: #fff;
-        text-shadow: 1px 1px 6px rgba(0, 18, 63, 0.1);
+        // text-shadow: 1px 1px 6px rgba(0, 18, 63, 0.1);
+        text-shadow: 5px 4px 1px rgba(0, 18, 63, 0.1);
         border-radius: 1px;
         text-align: center;
         padding: 22px 0;
@@ -767,6 +813,7 @@ border-radius: 15px;
     padding: 30px 0;
     text-align: center;
     margin-bottom: 40px;
+    box-shadow: 0px 7px 17px 0px rgba(42,74,134,0.2);
 }
 
 .start {
@@ -816,7 +863,7 @@ border-radius: 15px;
 
 .pay {
     background: #f6f8fc;
-    padding: 30px 0;
+    padding: 30px 0 90px 0;
     &__inner {
         box-shadow:0px 0px 22px 0px rgba(53,89,156,0.15);
         background: #fff;
@@ -871,8 +918,12 @@ border-radius: 15px;
         width: 50%;
         margin-bottom: 20px;
 
-            &_full{
+            &_full {
                 width: 100%;
+            }
+
+            &_padding {
+                padding-bottom: 20px;
             }
     }
 
@@ -949,6 +1000,39 @@ border-radius: 15px;
             background: url(../images/arrow.svg) no-repeat center center;
             background-size: 6px;
             transform: rotate(90deg);
+        }
+}
+
+.footer {
+    background: #e4e7ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 10px 0;
+    font-size: 18px;
+    color: #38475d;
+        &__social{
+            display: flex;
+            align-items: center;
+        }
+        &__line {
+            padding-bottom: 20px;
+        }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+        &__item {
+            margin: 0 15px;
+            color: #abb0b7;
+                & > a {
+                    color: #abb0b7; 
+                    &:hover {
+                        text-decoration: underline;
+                        color:  #64676c;
+                    }
+                }
         }
 }
 
