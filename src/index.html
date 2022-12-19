@@ -12,7 +12,7 @@
     <title>Lingopump</title>
 </head>
 <body>
-    <main class="main">
+    <main class="main" style="">
         <header class="header">
             <div class="container header__container">
                 <div class="header__logo">
@@ -33,19 +33,23 @@
             </div>
         </header>
         <section class="first-section">
-            <div class="squre squre_left">
+            <div class="squre squre_left" style="display: none">
                 <div class="squre__item">Tu Amigo Español</div>
                 <div class="squre__item">Your English-<br>Speaking Friend</div>
                 <div class="squre__item">Seu Amigo Portugues</div>
             </div>
-            <div class="squre squre_right">
+            <div class="squre squre_right" style="display: none">
                 <div class="squre__item">Tu Amigo Italiano</div>
                 <div class="squre__item">Ton Ami Francais</div>
                 <div class="squre__item">Dein Deutscher Freund</div>
             </div>
-            <div class="container">
+            <div class="container complex-content">
                 <h1 class="main-title">PUMP YOUR LANGUAGE SKILLS</h1>
-                <span class="call-to-action">Directly to your messenger</span>
+                <div class="call-to-action">
+                    <span class="call-to-action__main">Directly to your messenger</span>
+                    <span class="call-to-action__secondary">AUDIO + TEXT + TRANSLATION <br>from native speakers</span>
+                </div>
+                <div class="from-btn"></div>
                 <div class="first-section__animation-arrow">
                     <div class="chevron">
                         <div class="chevron__item"></div>
@@ -56,6 +60,7 @@
                 <div class="main-content">
                     <div class="main-content__center">
                         <img class="main-content__main-img" src="./images/phone.png" alt="">
+                        <img class="main-content__main-img main-content__main-img_mobile-size" src="./images/phone-mob.png" alt="">
                     </div>
                     <div class="audio-messages main-content__left">
                         <img src="./images/audio-mes.png" alt="audio-messages" class="audio-messages__images">
@@ -65,56 +70,57 @@
                         <img src="./images/text-mes.png" alt="text-messages" class="text-messages__images">
                         <span class="main-content__title">Text + <br>Translation</span>
                     </div>
+                    <div class="first-section__btn">
+                        <a href="#" class="btn btn_primary btn_copy">TRY FOR FREE</a>
+                    </div>
                 </div>
-            </div>
-            <a href="#" class="btn first-section__btn  btn_primary">TRY FOR FREE</a>
-        </section>
-        <section class="check-section">
-            <div class="container check-section__container">
-                <div class="check-section__inner">
-                    <span class="language-action">I want  to improve my</span>
-                    <div class="language-check">
-                        <ul class="language-check__list">
-                            <li class="language-check__item language-check__item_select">
-                                <img src="./images/french-flag.png" alt="French">
-                                <span>French</span>
-                            </li>
-                            <li class="language-check__item">
-                                <img src="./images/german-flag.png" alt="German">
-                                <span>German</span>
-                            </li>
-                            <li class="language-check__item">
-                                <img src="./images/spanish-flag.png" alt="Spanish">
-                                <span>Spanish</span>
-                            </li>
-                            <li class="language-check__item">
-                                <img src="./images/italh-flag.png" alt="Italian">
-                                <span>Italian</span>
-                            </li>
-                            <li class="language-check__item">
-                                <img src="./images/engl-flag.png" alt="English">
-                                <span>English</span>
-                            </li>
-                           <li class="language-check__item">
-                                <img src="./images/port-flag.png" alt="Portuguese">
-                                <span>Portuguese</span>
-                            </li>
-                        </ul>
+                <div class="check-section first-section__check-section" style="">
+                    <div class="check-section__container">
+                        <div class="check-section__inner">
+                            <span class="language-action">I want  to improve my</span>
+                            <div class="language-check">
+                                <ul class="language-check__list">
+                                    <li class="language-check__item language-check__item_select">
+                                        <img src="./images/french-flag.png" alt="French">
+                                        <span>French</span>
+                                    </li>
+                                    <li class="language-check__item">
+                                        <img src="./images/german-flag.png" alt="German">
+                                        <span>German</span>
+                                    </li>
+                                    <li class="language-check__item">
+                                        <img src="./images/spanish-flag.png" alt="Spanish">
+                                        <span>Spanish</span>
+                                    </li>
+                                    <li class="language-check__item">
+                                        <img src="./images/italh-flag.png" alt="Italian">
+                                        <span>Italian</span>
+                                    </li>
+                                    <li class="language-check__item">
+                                        <img src="./images/engl-flag.png" alt="English">
+                                        <span>English</span>
+                                    </li>
+                                   <li class="language-check__item">
+                                        <img src="./images/port-flag.png" alt="Portuguese">
+                                        <span>Portuguese</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <section class="presentation">
+
+    <section class="presentation" style="">
         <div class="presentation__bg">
             <div>
                 <div class="presentation__aerofon">
                     <img src="./images/phone-earphones.png" alt="phone-earphones">
                 </div>
-                <!-- <img src="./images/circle-up.png" alt="circle-up"> -->
             </div>
             <div>
-                <!-- <img src="./images/circle-down.png" alt="circle-down"> -->
             </div>
         </div>
         <div class="container">
@@ -135,6 +141,12 @@
                         </div>
                     </div>
             </div>
+        </div>
+            <div class="curcle-mobile">
+                <img class="curcle-mobile__static" src="./images/Circle-mob.png" alt="curcle-mobile">
+                <img class="curcle-mobile__dynamic" src="./images/phone-earphones.png" alt="curcle-mobile">
+            </div>
+        <div class="container">
             <h2 class="presentation__title">YOU CAN LEARN FRENCH <span>while...</span></h2>
             <div class="labels presentation__labels">
                     <div class="labels__wrap labels__wrap_image">
@@ -164,20 +176,28 @@
                         </div>
                     </div>
             </div>
+          </div>
         </div>
     </section>
 
-    <section class="friend">
-        <div class="container">
+    <section class="friend" style="">
+        <div class="container friend__container">
             <h2 class="section-title">CHOOSE YOUR Friend</h2>
             <div class="view-friend">
                 <div class="view-friend__item">
                     <div class="friend-audio">
                         <div class="friend-audio__item">
-                            <div class="friend-info">
+                            <div class="friend-info friend-info__player">
                                 <img src="./images/adrianna.jpg" alt="" class="friend-info__avatar">
-                               <span class="friend-info__name">Adrianna</span>
-                               <span class="friend-info__level">Level: A0</span>
+                                <div class="friend-info__resvonsive">
+                                        <span class="friend-info__name">Adrianna</span>
+                                        <span class="friend-info__level">Level: A0</span>
+                                        <div class="audio-button-mob-only">
+                                            <span>
+                                                <img src="./images/speaker-icon.png" alt="">
+                                            </span>
+                                        </div>
+                                </div>
                            </div>
                         </div>
                         <div class="friend-audio__item">
@@ -185,7 +205,7 @@
                                 <div class="phrase">
                                     I am young journalist, fond of learning foreign languages
                                 </div>
-                                <div class="audio-player">
+                                <div class="audio-player friend-audio__audio-player">
                                     <audio>
                                         <source src="./audio/Adrienne.mp3" type="audio/mp3">
                                     </audio>
@@ -213,7 +233,7 @@
             <div class="search-friend">
                 <div class="chose-lenguage chose-lenguage_border">
                     <div class="chose-lenguage__item">
-                        <span class="language-action">I want  to improve my </span>
+                        <span class="language-action">Choose language: </span>
                     </div>
                     <div class="chose-lenguage__item">
                         <div class="language-check">
@@ -246,11 +266,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="chose-level">
-                    <!-- <div class="chose-level__item"> -->
+                <div class="chose-level chose-level__border">
                         <span class="chose-name">Choose level:</span>
-                    <!-- </div> -->
-                    <!-- <div class="chose-level__item"> -->
                         <ul class="level-list">
                             <li class="level-list__item level-list__item_active">All</li>
                             <li class="level-list__item">A0</li>
@@ -258,7 +275,6 @@
                             <li class="level-list__item">B1</li>
                             <li class="level-list__item">B1-B2</li>
                         </ul>
-                    <!-- </div> -->
                 </div>
                 <div class="chose-theme">
                     <div class="chose-level__item"><span class="chose-name">Choose theme:</span></div>
@@ -391,7 +407,7 @@
             </div>
         </div>
     </section>
-    <section class="plans">
+    <section class="plans" style="">
         <div class="container">
             <h2 class="section-title">CHOOSE YOUR PLAN</h2>
             <div class="plans__inner">
@@ -437,7 +453,7 @@
             </div>
         </div>
     </section>
-    <section class="start">
+    <section class="start" style="">
         <div class="container">
             <h2 class="start__title">Start now!</h2>
             <span class="start__after-title">You get:</span>
@@ -454,7 +470,7 @@
             </div>
         </div>
     </section>
-    <section class="pay">
+    <section class="pay" style="">
         <div class="container">
             <div class="pay__inner">
                 <div class="lang-display">
@@ -519,7 +535,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" style="">
         <div class="footer__line footer__social"><a href="#" class="social-link social-link_inst social-link_text">lingo_pump</a></div>
         <div class="footer__line"><span>Contact us: <a href="#" class="">support@lingopump.com</a></span></div>
         <div class="footer__line">
