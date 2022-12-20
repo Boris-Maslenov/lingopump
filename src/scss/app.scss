@@ -568,7 +568,7 @@ html, body {
     }
 
     @media (max-width: $md) {
-        padding: 5px 0 0 0;
+        padding: 10px 0 0 0;
     }
 
 }
@@ -966,7 +966,7 @@ html, body {
     padding: 20px 0 25px 20px;
     max-width: 422px;
         @media (max-width: $md) {
-            padding-bottom: 0;
+            padding: 10px;
         }
 }
 
@@ -1071,16 +1071,23 @@ html, body {
         margin: 0 7px;
         font-size: 20px;
         user-select: none;
+        line-height: 1.5;
             &_active{
                 color:$color-red;
                 font-weight: 600;
             }
+    }
+
+    [data-hidden] {
+        display: none;
     }
 }
 
 .chose-name{
     font-size: 20px;
     font-weight: 500;
+    display: block;
+    padding: 12px 0;
 }
 
 .chose-level, .chose-theme {
@@ -1111,7 +1118,8 @@ html, body {
     overflow: hidden;
     padding: 80px 0;
         @media (max-width: $md) {
-            padding: 0;
+            padding: 5px 0;
+            padding-bottom: 50px;
         }
 }
 

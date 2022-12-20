@@ -1,5 +1,6 @@
- const friends = [
+ export const friends = [
     {
+        "id": 0,
         "name": "Lisa",
         "language": "English",
         "level": "A2-B1",
@@ -9,11 +10,12 @@
             "2": "travelling"
         },
         "result": "In a month you will be able to meet the English ant tell them about yourself without hesitation",
-        "photo": "/assets/img/lisa.png",
+        "photo": "assets/img/lisa.png",
         "msg": "Business coach, fond of hiking and travelling",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Lisa-en.mp3"
+        "audio": "assets/audio/lisa.mp3"
     },
     {
+        "id": 1,
         "name": "Mark",
         "language": "English",
         "level": "A1-A2",
@@ -24,12 +26,13 @@
             "3": "films"
         },
         "result": "just in a month, you'll be able to meet the American friends and tell them about yourself and without hesitation",
-        "photo": "/assets/img/sp5.png",
+        "photo": "assets/img/mark.png",
         "msg": "English teacher, likes to play baseball and football",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Mark-en.mp3"
+        "audio": "assets/audio/mark.mp3"
     },
     {
-        "name": "Matt",
+        "id": 2,
+        "name": "Matt(na)",
         "language": "English",
         "level": "B1-B2",
         "themes": {
@@ -39,13 +42,14 @@
             "3": "different cultures"
         },
         "result": "in a month, you'll learn to describe your day, keep the conversation at a common level, conduct a conversation about cultures of different countries.",
-        "photo": "/assets/img/sp4.png",
+        "photo": "assets/img/matt.png",
         "msg": "I am a customer success bank manager and I have many interesting stories for you",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Matt-en.mp3"
+        "audio": "assets/audio/mark.mp3"
         },
         
     {
-        "name": "Rebecca",
+        "id": 3,
+        "name": "Rebecca(na)",
         "language": "English",
         "level": "A1-A2",
         "themes": {
@@ -57,13 +61,14 @@
             
         },
         "result": "you'll enrich your English, you'll be able to maintain a conversation in high society and talk about philosophical topics.",
-        "photo": "/assets/img/rebeca.png",
+        "photo": "assets/img/rebecca.png",
         "msg": "I am a customer success bank manager and I have many interesting stories for you",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Nikki-en.mp3"
+        "audio": "assets/audio/adrienne.mp3"
         
     },
         {
-        "name": "Nikki",
+        "id": 4,
+        "name": "Nikki(na)",
         "language": "English",
         "level": "B1-B2",
         "themes": {
@@ -75,13 +80,14 @@
             
         },
         "result": "just in a month, you'll be able to meet the Portuguese and tell them about yourself and your friends without hesitation.",
-        "photo": "/assets/img/niikki.png",
+        "photo": "assets/img/nikki.png",
         "msg": "I am a legal secretary and i just love cooking",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Rebecca-en.mp3"
+        "audio": "assets/audio/adrienne.mp3"
         },
 
         
     {
+        "id": 5,
         "name": "Nicole",
         "language": "German",
         "level": "A2-B1",
@@ -91,11 +97,12 @@
             "2": "travelling"
         },
         "result": "In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you.",
-        "photo": "/assets/img/Nicole2.png",
+        "photo": "assets/img/nicole-2.png",
         "msg": "I am a dancer and I love to cook dishes from around the world",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Nicole-de.mp3"
+        "audio": "assets/audio/nicole.mp3"
     },
     {
+        "id": 6,
         "name": "Sabrina",
         "language": "German",
         "level": "B2-C1",
@@ -105,11 +112,12 @@
             "2": "vital value"
         },
         "result": "In a month you will diversify your German and you'll be able to maintain a conversation on any topics",
-        "photo": "/assets/img/Sabrina.png",
+        "photo": "assets/img/Sabrina.png",
         "msg": "A girl who tries herself in all areas of life",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Sabrina-de.mp3"
+        "audio": "assets/audio/sabrina.mp3"
     },
     {
+        "id": 7,
         "name": "Maria",
         "language": "German",
         "level": "A2-B1",
@@ -119,11 +127,12 @@
             "2": "vital value"
         },
         "result": "In a month you will diversify your German and you'll be able to maintain a conversation on any topics",
-        "photo": "/assets/img/Maria-2.png",
+        "photo": "assets/img/maria-2.png",
         "msg": "Teacher of foreign languages, fond of traveling",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Maria-de.mp3"
+        "audio": "assets/audio/maria.mp3"
     },
     {
+        "id": 8,
         "name": "Benjamin",
         "language": "German",
         "level": "A0",
@@ -133,11 +142,12 @@
             "2": "sporting activity"
         },
         "result": "you'll enrich your German, you'll be able to maintain a conversation in high society and you can support absolutely all sports topics",
-        "photo": "/assets/img/Benjamin.png",
+        "photo": "assets/img/benjamin.png",
         "msg": "Guide in the Museum, sportsmen",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Benjamin-de.mp3"
+        "audio": "assets/audio/benjamin.mp3"
     },
     {
+        "id": 9,
         "name": "Nicole Riederer",
         "language": "German",
         "level": "A1-A2",
@@ -153,11 +163,12 @@
             "8": "Morocco"
         },
         "result": "in some even short time you will be able to discuss diverse topics, enjoy working with the German language and your vocabulary will steadily grow day by day.",
-        "photo": "/assets/img/sara.png",
+        "photo": "assets/img/sara.png",
         "msg": "l am mother of three children in a multi-cultural life",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Nicole-Riederer-de.mp3"
+        "audio": "assets/audio/nicole-riederer.mp3"
     },
     {
+        "id": 10,
         "name": "Shamima",
         "language": "French",
         "level": "A0",
@@ -166,11 +177,12 @@
             "1": "common idiomatic expressions and business language skills"
         },
         "result": "you'll be able to introduce yourself fluently in no time and boost your self-confidence in your daily life.",
-        "photo": "/assets/img/maria.png",
+        "photo": "assets/img/maria.png",
         "msg": "Private tutor, fond of travelling.",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Shamima.mp3"
+        "audio": "assets/audio/shamima.mp3"
     },
     {
+        "id": 11,
         "name": "Steven",
         "language": "French",
         "level": "A0",
@@ -179,11 +191,12 @@
             "1": "common phrases"
         },
         "result": "just in a month, you'll be able to tell about yourself and order coffee with croissants without the help of a translator",
-        "photo": "/assets/img/paul.png",
+        "photo": "assets/img/steven.png",
         "msg": "Professional musician, fond of photography",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Steven.mp3"
+        "audio": "assets/audio/steven.mp3"
     },
     {
+        "id": 12,
         "name": "Julien",
         "language": "French",
         "level": "A1-A2",
@@ -192,12 +205,13 @@
             "1": "working days"
         },
         "result": "just in a month, you'll be able to meet the French and tell them about yourself and your friends without hesitation",
-        "photo": "/assets/img/julien.png",
+        "photo": "assets/img/julien.png",
         "msg": "Concierge at a hotel on the Champs-Elysées, loves to travel and meet all over the world",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Julien.mp3"
+        "audio": "assets/audio/julien.mp3"
     },
     {
-        "name": "Emma",
+        "id": 13,
+        "name": "Emma(na)",
         "language": "French",
         "level": "A2-B1",
         "themes": {
@@ -205,12 +219,13 @@
             "1": "French culture"
         },
         "result": "In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you",
-        "photo": "/assets/img/adrianna.png",
+        "photo": "assets/img/emma.png",
         "msg": "Young journalist, fond of learning foreign languages",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Emma.mp3"
+        "audio": "assets/audio/adrienne.mp3"
     },
     {
-        "name": "Gregory",
+        "id": 14,
+        "name": "Gregory(na)",
         "language": "French",
         "level": "B2-C1",
         "themes": {
@@ -220,11 +235,12 @@
             "3": "meeting friends"
         },
         "result": "you'll enrich your French, you'll be able to maintain a conversation in high society and talk about philosophical topics",
-        "photo": "/assets/img/gregori.png",
+        "photo": "assets/img/gregori.png",
         "msg": "Romantic French professor with extensive experience working with students from different countries",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Gregory.mp3"
+        "audio": "assets/audio/benjamin.mp3"
     },
     {
+        "id": 15,
         "name": "Sara",
         "language": "Italian",
         "level": "A2-B1",
@@ -233,11 +249,12 @@
             "1": "travel by car in Italy"
         },
         "result": "Just in a month, you'll be able to meet the Italians and tell them about yourself and your friends without hesitation.",
-        "photo": "/assets/img/Sara2.png",
+        "photo": "assets/img/sara-2.png",
         "msg": "Translator, fitness and pets lover",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Sara-it.mp3"
+        "audio": "assets/audio/sara.mp3"
     },
     {
+        "id": 16,
         "name": "Francesco",
         "language": "Italian",
         "level": "B2-C1",
@@ -247,11 +264,12 @@
             "2": "outdoor activities"
         },
         "result": "You'll enrich your Italian, you'll be able to maintain a conversation with a native speakers in any situation",
-        "photo": "/assets/img/Francesco.png",
+        "photo": "assets/img/francesco.png",
         "msg": "School teacher, fond of learning foreign language ",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Francesco-it.mp3"
+        "audio": "assets/audio/francesco.mp3"
     },
     {
+        "id": 17,
         "name": "Giulia",
         "language": "Italian",
         "level": "A1-A2",
@@ -261,11 +279,12 @@
             "2": "study at the best universities in the world"
         },
         "result": "In a month, you will be able to communicate on philosophical topics, as well as maintain a conversation in high society.",
-        "photo": "/assets/img/Giulia.png",
+        "photo": "assets/img/giulia.png",
         "msg": "Translator who speaks 4 languages",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Guilia-it.mp3"
+        "audio": "assets/audio/guilia.mp3"
     },
     {
+        "id": 18,
         "name": "Marzia",
         "language": "Italian",
         "level": "B1-B2",
@@ -275,14 +294,13 @@
             "2": "band rehearsals"
         },
         "result": "In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you.",
-        "photo": "/assets/img/Marzia.png",
+        "photo": "assets/img/marzia.png",
         "msg": "Freelance translator, fond of travelling",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Marzia-it.mp3"
+        "audio": "assets/audio/marzia.mp3"
     },
-
-    ,
     {
-        "name": "Susanna",
+        "id": 19,
+        "name": "Susanna(na)",
         "language": "Italian",
         "level": "A1-A2",
         "themes": {
@@ -292,13 +310,14 @@
             "3": "books"
         },
         "result": "Just in a month you will be able to speak in French about your traveling, different types of art and different cultures, ",
-        "photo": "/assets/img/suzanne.png",
+        "photo": "assets/img/susanna.png",
         "msg": "I am a raveler with the best stories from all over the world",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Susanna-it.mp3"
+        "audio": "assets/audio/sara.mp3"
     },
 
     {
-        "name": "Francine",
+        "id": 20,
+        "name": "Francine(na)",
         "language": "Italian",
         "level": "A0",
         "themes": {
@@ -308,13 +327,14 @@
             "3": "everyday life"
         },
         "result": "you'll be able to introduce yourself fluently in no time and boost your self-confidence in your daily life.",
-        "photo": "/assets/img/francine.png",
+        "photo": "assets/img/francine.png",
         "msg": "I am a confectioner and really fond of photography",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Francine-it.mp3"
+        "audio": "assets/audio/shamima.mp3"
     },
 
     {
-        "name": "Elena",
+        "id": 21,
+        "name": "Elena(na)",
         "language": "Italian",
         "level": "A2-B1",
         "themes": {
@@ -325,12 +345,13 @@
             "4": "pets"
         },
         "result": "just in month you will able to tell about yourself and order pizza or pasta without the help of translator ",
-        "photo": "/assets/img/elena.png",
+        "photo": "assets/img/elena.png",
         "msg": "I am an event department worker and like traveling a lot",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Elena-it.mp3"
+        "audio": "assets/audio/adrienne.mp3"
     },
 
     {
+        "id": 22,
         "name": "Cris",
         "language": "Spanish",
         "level": "B1-B2",
@@ -340,12 +361,13 @@
             "2": "cooking and travel"
         },
         "result": "In only one month, you will learn to talk about your day, you'll be able to order a coffee or “tapas” in a bar and you will appreciate the cultural differences between Spain and other countries.",
-        "photo": "/assets/img/nicole.png",
+        "photo": "assets/img/nicole.png",
         "msg": "A translation project manager who loves to travel and is fond of cycling.",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Cris-sp.mp3"
+        "audio": "assets/audio/cris.mp3"
     },
     {
-        "name": "César",
+        "id": 23,
+        "name": "César(na)",
         "language": "Spanish",
         "level": "B2-C1",
         "themes": {
@@ -354,11 +376,12 @@
             "2": "computer games"
         },
         "result": "just in month you will able to tell about yourself and order Gazpacho and Churros without the help of translator",
-        "photo": "/assets/img/cesar.png",
+        "photo": "assets/img/cesar.png",
         "msg": "Operator in cinemas, fond of computer games",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Cesar-sp.mp3"
+        "audio": "assets/audio/benjamin.mp3"
     },
     {
+        "id": 24,
         "name": "María Luisa",
         "language": "Spanish",
         "level": "A0",
@@ -367,11 +390,12 @@
             "1": "human relationships"
         },
         "result": "just in a month, you'll be able to meet the Spanish and tell them about yourself and your friends without hesitation.",
-        "photo": "/assets/img/maria-luisa.png",
+        "photo": "assets/img/maria-luisa.png",
         "msg": "Artist, mother of three children",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Maria-Luisa-A0.mp3"
+        "audio": "assets/audio/maria-luisa-a0.mp3"
     },
     {
+        "id": 25,
         "name": "Montse",
         "language": "Spanish",
         "level": "A0",
@@ -379,12 +403,13 @@
             "0": "daily life with daughter and friends"
         },
         "result": "In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you.",
-        "photo": "/assets/img/montse.png",
+        "photo": "assets/img/montse.png",
         "msg": "An administrator who likes to give smiles",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Montse-A0.mp3"
+        "audio": "assets/audio/montse-a0.mp3"
     },
     {
-        "name": "Debora",
+        "id": 26,
+        "name": "Debora(na)",
         "language": "Portuguese",
         "level": "B1-B2",
         "themes": {
@@ -393,12 +418,13 @@
             "2": "travel all over the world"
         },
         "result": "In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you.",
-        "photo": "/assets/img/port_03.png",
+        "photo": "assets/img/debora.png",
         "msg": "Journalist, fonf of learning forieng language",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Debora-pt.aac"
+        "audio": "assets/audio/montse-2.mp3"
     },
     {
-        "name": "Monica",
+        "id": 27,
+        "name": "Monica(nanf)",
         "language": "Portuguese",
         "level": "A0",
         "themes": {
@@ -407,13 +433,14 @@
             "2": "travel all over the world"
         },
         "result": "just in a month, you'll be able to meet the Italians and tell them about yourself and your friends without hesitation.",
-        "photo": "/assets/img/port_02.png",
+        "photo": "assets/img/sara-2.png",
         "msg": "Translator, fond of travelling and meeting new people",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Monica-pt.oga"
+        "audio": "assets/audio/sara.mp3"
     }
     ,
     {
-        "name": "Kaya",
+        "id": 28,
+        "name": "Kaya(na)",
         "language": "Portuguese",
         "level": "A1-A2",
         "themes": {
@@ -423,13 +450,14 @@
             "3": "friends"
         },
         "result": "just in a month, you'll be able to meet the Portuguese and tell them about yourself and your friends without hesitation. ",
-        "photo": "/assets/img/kaya.png",
+        "photo": "assets/img/kaya.png",
         "msg": "I am a translator and work on luxury cruise ships",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Kaya-pt.mp3"
+        "audio": "assets/audio/isadora.mp3"
     }
     ,
     {
-        "name": "Mafalda",
+        "id": 29,
+        "name": "Mafalda(na)",
         "language": "Portuguese",
         "level": "A0",
         "themes": {
@@ -441,32 +469,9 @@
             "5": "literature"
         },
         "result": "just in month you will able to tell about yourself and order coffe without the help of translator",
-        "photo": "/assets/img/mafalda.png",
+        "photo": "assets/img/mafalda.png",
         "msg": "I am a translator, actor and writer",
-        "audio": "https://lingopump.com/wp-content/uploads/2020/09/Mafalda-pt.mp3"
+        "audio": "assets/audio/marzia.mp3"
     }
 ];
 
-const a = console.time();
-function getAllThemes(arr){
-    let result = []
-    arr.forEach(element => {
-        if('themes' in element){
-            Object.values(element.themes).forEach(theme => {
-                const themeToLow = theme.toLowerCase();
-                if(!result.includes(themeToLow)) {
-                    result.push(themeToLow)
-                }
-            });
-        }
-    });
-    return [result, result.length];
-}
-
-console.log(getAllThemes(filter));
-
-console.timeEnd(a);
-
-
-
-export default friends;

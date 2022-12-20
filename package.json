@@ -2,7 +2,8 @@
   "name": "lingopump",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --node-env=development --mode development --open",
     "watch": "webpack --node-env=development --mode development --watch",
