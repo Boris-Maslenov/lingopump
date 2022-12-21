@@ -563,6 +563,9 @@ html, body {
         background: $color-items-hover;
         cursor: pointer;
     }
+    &_active{
+        background: $color-items-hover;
+    }
     &_select{
         background: $color-items-hover; 
     }

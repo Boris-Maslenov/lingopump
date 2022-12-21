@@ -23,24 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.select-friend', {
         init: false,
         slidesPerView: 'auto',
-        // centeredSlides: true,
         spaceBetween: 60,
-        // freeMode: true,
+        observer: true,
     });
 
     
     copyHtmlElement(768, '.btn_copy', '.first-section__btn', '.from-btn');
 
  const filter = () => {
+
     let filtersMap = {
         language: 'all',
         level: 'all',
         theme: 'all',
     }
+
     const languagesBlock = document.querySelectorAll('.language-check');
     const levelListBlock = document.querySelector('.level-list');
     const themeListBlock = document.querySelector('.theme-list');
-    const selectFriendBlock = document.querySelector('.select-friend');
+    const selectFriendBlock = document.querySelector('.select-friend .swiper-wrapper');
 
     const getAllThemesLanguagesLevels = (arr) => {
         let result = {
@@ -70,19 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const friendsArr = getAllThemesLanguagesLevels(friends);
+    console.log(friendsArr);
 
     const renderLevels = () => {
         let resultArr = [];
         const LevelCard = (name, i) => {
             return i === 0 ? 
-                    `<li class="level-list__item level-list__item_active">All</li>` : 
-                    `<li class="level-list__item">${name}</li>`;
+                    `<li data-filter='level' data-value='all' class="level-list__item level-list__item_active">All</li>` : 
+                    `<li data-filter='level' data-value="${name}" class="level-list__item">${name}</li>`;
         }
 
         friendsArr.levels.forEach((level, i) => {
             const qoeue = LevelCard(level, i);
             resultArr.push(qoeue);
         });
+
         levelListBlock.innerHTML = resultArr.join('');
     }
 
@@ -91,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const themeCard = (name, i) => {
             const dataHidden = i < 7 ? '' : 'data-hidden'; 
             return i === 0 ? 
-                    `<li class="theme-list__item theme-list__item_active">All</li>` : 
-                    `<li ${dataHidden} class="theme-list__item">${name}</li>`;
+                    `<li data-filter='theme' data-value='all' class="theme-list__item theme-list__item_active">ALL</li>` : 
+                    `<li ${dataHidden} data-filter='theme' data-value="${name}" class="theme-list__item">${name}</li>`;
         }
 
         friendsArr.themes.forEach((theme, i) => {
@@ -106,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderLanguages = () => {
         let langListOutput = [];
         const lenguagesCard = (src, name, ) => {
-            return `<li class="language-check__item">
+            return `<li data-filter='language' data-value="${name}" class="language-check__item">
                         <img src="${src}" alt="${name}">
                         <span>${name}</span>
                     </li>`
@@ -130,21 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const levelsFilter = (arr) => {
             if(filtersMap.level === 'all') return arr;
-            return arr.filter(({level}) => level === filtersMap.level);
+            return arr.filter(({level}) => level.toLowerCase() === filtersMap.level);
         }
         const themesFilter = (arr) => {
             if(filtersMap.theme === 'all') return arr;
-            return arr.filter(({theme}) => theme === filtersMap.theme);
+            return arr.filter(({themes}) => Object.values(themes).includes(filtersMap.theme));
         }
         const resultArr = themesFilter( levelsFilter( languagesFilter(arr) ) );
         return resultArr;
     }
 
-    //filterFriends(friends)
     const renderFriends = ( arr ) => {
         let resultArr = [];
         const swiperCard = (html) => {
-            return `<div class="swiper-wrapper">${html}</div>`;
+            return `${html}`;
         }
 
         const friendCard = (src, name, level, id) => {
@@ -157,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="friend-info__level">Level: ${level}</span>
                         </div>
                     </div>`;
-            
         }
 
         arr.forEach(({name, level, photo, id}) => {
@@ -177,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const friendMsg = parent.querySelector('.phrase');
         const friendResult = parent.querySelector('.friend-result');
         const friendTheme = parent.querySelector('.friend-theme');
-        const friendAudio = parent.querySelector('audio > source');
 
         friendAvatar.setAttribute('src', photo);
         friendName.innerHTML = name;
@@ -185,8 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
         friendMsg.innerHTML = msg;
         friendResult.innerHTML = result;
         friendTheme.innerHTML = Object.values(themes).join(', ') ;
-        // friendAudio.setAttribute('src', audio);
-        // stepPlayer = new Plyr('audio');
         stepPlayer.source = {
             type: 'audio',
             sources: [
@@ -219,6 +217,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // const filtersElements = document.querySelectorAll('[data-filter]');
+    // console.log(filtersElements);
+
+    const filtersElements = document.querySelectorAll('.js-filter');
+        filtersElements.forEach(element => {
+            element.addEventListener('click', e => {
+                const target = e.target;
+                const filterItem = target.closest('[data-filter]');
+                if(filterItem) {
+                    const parent = target.closest('.js-filter');
+                    const allFilterElements = parent.querySelectorAll('[data-filter]');
+                    let classActive;
+                    allFilterElements.forEach(element => {
+                        classActive = element.classList[0] + '_active';
+                        element.classList.remove(classActive);
+                    });
+                    filterItem.classList.add(classActive);
+                    const dataFilter = filterItem.getAttribute('data-filter');
+                    const dataValue = filterItem.getAttribute('data-value');
+                    // console.log(dataFilter, dataValue);
+                    filtersMap[dataFilter] = dataValue;
+                    console.log(filtersMap);
+                    renderFriends( filterFriends(friends) );
+                    swiper.init();
+                }
+            });
+    });
+
 
 
 }
