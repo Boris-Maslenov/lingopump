@@ -11,7 +11,7 @@
     "build-prod": "webpack"
   },
   "browserslist": [
-    "last 3 versions"
+    "last 5 versions"
   ],
   "devDependencies": {
     "@babel/core": "^7.18.10",

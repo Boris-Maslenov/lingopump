@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <title>Lingopump</title>
+    <title>Lingopump | test version</title>
+    <meta name="description" content="Тестовая версия проекта Lingopump, выполнено на нативном Java Script">
 </head>
+
 <body>
-    <main class="main" style="">
+    <main class="main">
         <header class="header">
             <div class="container header__container">
                 <div class="header__logo">
                     <img src="./images/logo-pump.svg" alt="logo" class="logo">
                 </div>
-                <div class="header__menu">
+                <div class="header__menu js-burger-menu">
                     <ul class="munu">
-                        <li class="munu__item"><a class="menu__link" href="#">How it works</a></li>
-                        <li class="munu__item"><a class="menu__link" href="#">Choose speaker</a></li>
-                        <li class="munu__item"><a class="menu__link" href="#">Price</a></li>
+                        <li class="munu__item"><a scroll class="menu__link" href="#presentation">How it works</a></li>
+                        <li class="munu__item"><a scroll class="menu__link" href="#choose-speaker">Choose speaker</a></li>
+                        <li class="munu__item"><a scroll class="menu__link" href="#plans">Price</a></li>
                         <li class="munu__item"><a class="menu__link" href="#">Creator</a></li>
-                        <li class="munu__item"><a class="menu__link" href="#">FAQ</a></li>                                        
+                        <li class="munu__item"><a class="menu__link" href="#">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="header__social">
-                   <a href="#" class="social-link social-link_inst"></a> 
+                    <a href="#" class="social-link social-link_inst"></a>
+                </div>
+                <div class="header__hamburger">
+                    <button type="button" class="hamburger"><span></span></button>
                 </div>
             </div>
         </header>
@@ -60,7 +66,8 @@
                 <div class="main-content">
                     <div class="main-content__center">
                         <img class="main-content__main-img" src="./images/phone.png" alt="">
-                        <img class="main-content__main-img main-content__main-img_mobile-size" src="./images/phone-mob.png" alt="">
+                        <img class="main-content__main-img main-content__main-img_mobile-size"
+                            src="./images/phone-mob.png" alt="">
                     </div>
                     <div class="audio-messages main-content__left">
                         <img src="./images/audio-mes.png" alt="audio-messages" class="audio-messages__images">
@@ -71,15 +78,15 @@
                         <span class="main-content__title">Text + <br>Translation</span>
                     </div>
                     <div class="first-section__btn">
-                        <a href="#" class="btn btn_primary btn_copy">TRY FOR FREE</a>
+                        <a scroll href="#choose-speaker" class="btn btn_primary btn_copy">TRY FOR FREE</a>
                     </div>
                 </div>
                 <div class="check-section first-section__check-section" style="">
                     <div class="check-section__container">
                         <div class="check-section__inner">
-                            <span class="language-action">I want  to improve my</span>
-                            <div class="language-check">
-                                <ul class="language-check__list"></ul> 
+                            <span class="language-action">I want to improve my</span>
+                            <div class="language-check language-check_first">
+                                <ul class="language-check__list"></ul>
                             </div>
                         </div>
                     </div>
@@ -87,8 +94,7 @@
             </div>
         </section>
     </main>
-
-    <section class="presentation" style="">
+    <section id="presentation" class="presentation">
         <div class="presentation__bg">
             <div>
                 <div class="presentation__aerofon">
@@ -101,83 +107,84 @@
         <div class="container">
             <h2 class="presentation__title">JUST IN A MONTH <span>you will..</span></h2>
             <div class="labels presentation__labels">
-                    <div class="labels__wrap">
-                        <div class="text-label">
-                            <span class="text-label__message">Have confident <br>Day to Day French</span>
-                        </div>
-                        <div class="text-label">
-                            <span class="text-label__message">Understand native speakers</span>
-                        </div>
-                        <div class="text-label text-label_coffe">
-                            <span class="text-label__message">Order something in <br>the cafe <br>without help of translator</span>
-                        </div>
-                        <div class="text-label">
-                            <span class="text-label__message">Memorize common phrases forever  <br>(why it works)</span>
-                        </div>
+                <div class="labels__wrap">
+                    <div class="text-label">
+                        <span class="text-label__message">Have confident <br>Day to Day French</span>
                     </div>
+                    <div class="text-label">
+                        <span class="text-label__message">Understand native speakers</span>
+                    </div>
+                    <div class="text-label text-label_coffe">
+                        <span class="text-label__message">Order something in <br>the cafe <br>without help of
+                            translator</span>
+                    </div>
+                    <div class="text-label">
+                        <span class="text-label__message">Memorize common phrases forever <br>(why it works)</span>
+                    </div>
+                </div>
             </div>
         </div>
-            <div class="curcle-mobile">
-                <img class="curcle-mobile__static" src="./images/Circle-mob.png" alt="curcle-mobile">
-                <img class="curcle-mobile__dynamic" src="./images/phone-earphones.png" alt="curcle-mobile">
-            </div>
+        <div class="curcle-mobile">
+            <img class="curcle-mobile__static" src="./images/Circle-mob.png" alt="curcle-mobile">
+            <img class="curcle-mobile__dynamic" src="./images/phone-earphones.png" alt="curcle-mobile">
+        </div>
         <div class="container">
             <h2 class="presentation__title">YOU CAN LEARN FRENCH <span>while...</span></h2>
             <div class="labels presentation__labels">
-                    <div class="labels__wrap labels__wrap_image">
-                        <div class="image-label">
-                            <img src="./images/img1.jpg" alt="">
-                            <span class="image-label__message">..driving a car</span>
-                        </div>
-                        <div class="image-label">
-                            <img src="./images/img2.jpg" alt="">
-                            <span class="image-label__message">..eating </span>
-                        </div>
-                        <div class="image-label">
-                            <img src="./images/img3.jpg" alt="">
-                            <span class="image-label__message">..brushing your teeth </span>
-                        </div>
-                        <div class="image-label">
-                            <img src="./images/img4.jpg" alt="">
-                            <span class="image-label__message">..on the way to work</span>
-                        </div>
-                        <div class="image-label">
-                            <img src="./images/img5.jpg" alt="">
-                            <span class="image-label__message">..playing sports</span>
-                        </div>
-                        <div class="image-label">
-                            <img src="./images/img6.jpg" alt="">
-                            <span class="image-label__message">..walking your dog</span>
-                        </div>
+                <div class="labels__wrap labels__wrap_image">
+                    <div class="image-label">
+                        <img src="./images/img1.jpg" alt="">
+                        <span class="image-label__message">..driving a car</span>
                     </div>
+                    <div class="image-label">
+                        <img src="./images/img2.jpg" alt="">
+                        <span class="image-label__message">..eating </span>
+                    </div>
+                    <div class="image-label">
+                        <img src="./images/img3.jpg" alt="">
+                        <span class="image-label__message">..brushing your teeth </span>
+                    </div>
+                    <div class="image-label">
+                        <img src="./images/img4.jpg" alt="">
+                        <span class="image-label__message">..on the way to work</span>
+                    </div>
+                    <div class="image-label">
+                        <img src="./images/img5.jpg" alt="">
+                        <span class="image-label__message">..playing sports</span>
+                    </div>
+                    <div class="image-label">
+                        <img src="./images/img6.jpg" alt="">
+                        <span class="image-label__message">..walking your dog</span>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
         </div>
     </section>
-
-    <section class="friend" style="">
+    <section id="choose-speaker" class="friend">
         <div class="container friend__container">
             <h2 class="section-title">CHOOSE YOUR Friend</h2>
-            <div class="view-friend">
+            <div id="to-top" class="view-friend animate__animated animate__fadeIn">
                 <div class="view-friend__item">
                     <div class="friend-audio">
                         <div class="friend-audio__item">
                             <div class="friend-info friend-info__player">
                                 <img src="./images/adrianna.jpg" alt="" class="friend-info__avatar">
                                 <div class="friend-info__resvonsive">
-                                        <span class="friend-info__name">Adrianna</span>
-                                        <span class="friend-info__level">Level: A0</span>
-                                        <div class="audio-button-mob-only">
-                                            <span>
-                                                <img src="./images/speaker-icon.png" alt="">
-                                            </span>
-                                        </div>
+                                    <span class="friend-info__name">Adrianna</span>
+                                    <span class="friend-info__level">Level: A0</span>
+                                    <div class="audio-button-mob-only">
+                                        <span>
+                                            <img class="audio-button-mob-only__icon" src="./images/speaker.png" alt="">
+                                            <img style="display: none;" src="./images/speaker.gif" alt="">
+                                        </span>
+                                    </div>
                                 </div>
-                           </div>
+                            </div>
                         </div>
                         <div class="friend-audio__item">
                             <div class="">
-                                <div class="phrase">
+                                <div id="to-bottom" class="phrase">
                                     I am young journalist, fond of learning foreign languages
                                 </div>
                                 <div class="audio-player friend-audio__audio-player">
@@ -186,22 +193,28 @@
                                     </audio>
                                 </div>
                                 <div class="get-start-button">
-                                    <a href="#" class="btn btn_primary">TRY FOR FREE</a>
+                                    <a scroll href="#pay" class="btn btn_primary js-choose-friend">choose</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="view-friend__item view-friend__item_right">
+                <div class="view-friend__item view-friend__item_right vfm-button">
                     <div class="friend-text">
                         <div class="chose-text__message">
                             <span class="friend-text__bold">Theme</span>
-                            <span class="friend-theme friend-text__little">the everyday life of a native Parisian, French culture</span>
+                            <span class="friend-theme friend-text__little">the everyday life of a native Parisian,
+                                French culture</span>
                         </div>
                         <div class="friend-text__message">
                             <span class="friend-text__bold">Result</span>
-                            <span class="friend-result friend-text__little">In a month, you'll learn to describe your day, keep the conversation at a common level, and understand what the waiter at the café says to you</span>
+                            <span class="friend-result friend-text__little">In a month, you'll learn to describe your
+                                day, keep the conversation at a common level, and understand what the waiter at the café
+                                says to you</span>
                         </div>
+                    </div>
+                    <div class="vfm-button__element">
+                        <a scroll href="#pay" class="btn btn_primary js-choose-friend">Choose</a>
                     </div>
                 </div>
             </div>
@@ -217,36 +230,23 @@
                     </div>
                 </div>
                 <div class="chose-level chose-level__border">
-                        <span class="chose-name">Choose level:</span>
-                        <ul class="level-list js-filter">
-                            <li class="level-list__item level-list__item_active">All</li>
-                            <li class="level-list__item">A0</li>
-                            <li class="level-list__item">A1-A2</li>
-                            <li class="level-list__item">B1</li>
-                            <li class="level-list__item">B1-B2</li>
-                        </ul>
+                    <span class="chose-name">Choose level:</span>
+                    <ul class="level-list js-filter"></ul>
                 </div>
                 <div class="chose-theme">
                     <div class="chose-level__item"><span class="chose-name">Choose theme:</span></div>
                     <div class="chose-level__item">
-                        <ul class="theme-list js-filter">
-                            <!-- <li class="theme-list__item theme-list__item_active">All</li>
-                            <li class="theme-list__item">travel,</li>
-                            <li class="theme-list__item">vacation,</li>
-                            <li class="theme-list__item">children,</li>
-                            <li class="theme-list__item">cafe,</li>
-                            <li class="theme-list__item">work,</li>
-                            <li class="theme-list__item">education</li> -->
-                        </ul>
+                        <ul class="theme-list js-filter"></ul>
+                        <button class="chose-theme__show-more">show more</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="select-friend">
-            <div class="swiper-wrapper"></div>
+            <div class="swiper-wrapper animate__animated animate__fadeIn"></div>
         </div>
     </section>
-    <section class="plans" style="">
+    <section id="plans" class="plans">
         <div class="container">
             <h2 class="section-title">CHOOSE YOUR PLAN</h2>
             <div class="plans__inner">
@@ -256,10 +256,11 @@
                         <div class="price-block">
                             9 EUR
                         </div>
-                        <span class="plan-label__after-price">During this period you can change your speaker <span>1 time</span></span>   
+                        <span class="plan-label__after-price">During this period you can change your speaker <span>1
+                                time</span></span>
                     </div>
                     <div class="plan-label__footer">
-                        <a href="#" class="btn btn_secondary">CHOOSE</a>
+                        <a data-value="1" scroll href="#pay" class="btn btn_secondary">CHOOSE</a>
                     </div>
 
                 </div>
@@ -269,10 +270,11 @@
                         <div class="price-block">
                             21 EUR
                         </div>
-                        <span class="plan-label__after-price">During this period you can change your speaker <span>3 times</span></span>   
+                        <span class="plan-label__after-price">During this period you can change your speaker <span>3
+                                times</span></span>
                     </div>
                     <div class="plan-label__footer">
-                        <a href="#" class="btn btn_secondary">CHOOSE</a>
+                        <a data-value="2" scroll href="#pay" class="btn btn_secondary">CHOOSE</a>
                     </div>
 
                 </div>
@@ -282,17 +284,17 @@
                         <div class="price-block">
                             39 EUR
                         </div>
-                        <span class="plan-label__after-price">During this period you can change your speaker <span>6 time</span></span>   
+                        <span class="plan-label__after-price">During this period you can change your speaker <span>6
+                                time</span></span>
                     </div>
                     <div class="plan-label__footer">
-                        <a href="#" class="btn btn_secondary">CHOOSE</a>
+                        <a scroll data-value="3" href="#pay" class="btn btn_secondary">CHOOSE</a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-    <section class="start" style="">
+    <section class="start">
         <div class="container">
             <h2 class="start__title">Start now!</h2>
             <span class="start__after-title">You get:</span>
@@ -304,16 +306,19 @@
                     <span class="start__message"><strong>30 text + <br>translation</strong></span>
                 </div>
                 <div class="start__item">
-                    <span class="start__message">You have access <br>to the materials <br><strong>forever</strong></span>
+                    <span class="start__message">You have access <br>to the materials
+                        <br><strong>forever</strong></span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="pay" style="">
+    <section id="pay" class="pay">
         <div class="container">
             <div class="pay__inner">
                 <div class="lang-display">
-                    <div class="selected-language">Selected language: <span class="selected-language__name">French</span> <img class="selected-language__pic" src="./images/french-flag.png" alt=""></div>
+                    <div class="selected-language">Selected language: <span
+                            class="selected-language__name">French</span> <img class="selected-language__pic"
+                            src="./images/french-flag.png" alt=""></div>
                 </div>
                 <form action="#" class="form choose__form">
                     <div class="form__item">
@@ -330,29 +335,26 @@
                     </div>
                     <div class="form__item">
                         <label class="form__label" for="">Choose a native speaker*</label>
-                                <select class="form__input form__input_option" name="speaker" id="select-speaker">
-                                    <option value="">---</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>                
+                        <select class="form__input form__input_option" name="speaker" id="select-speaker">
+                            <option value="">---</option>
+                        </select>
                     </div>
                     <div class="form__item">
                         <label class="form__label" for="">Choose a messenger*</label>
-                            <select class="form__input form__input_option" name="messenger" id="select-messenger">
-                                <option value="">---</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select>
+                        <select class="form__input form__input_option" name="messenger" id="select-messenger">
+                            <option value="">---</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
                     </div>
                     <div class="form__item">
-                        <label class="form__label" >Choose your plan*</label>
-                                <select class="form__input form__input_option" name="plan" id="select-plan">
-                                    <option value="">---</option>
-                                    <option value="">1</option>
-                                    <option value="">3</option>
-                                    <option value="">3</option>
+                        <label class="form__label">Choose your plan*</label>
+                        <select class="form__input form__input_option" name="plan" id="select-plan">
+                            <option value="">---</option>
+                            <option value="">1</option>
+                            <option value="">3</option>
+                            <option value="">3</option>
                         </select>
                     </div>
                     <div class="form__item form__item_full form__item_padding">
@@ -374,8 +376,9 @@
             </div>
         </div>
     </section>
-    <footer class="footer" style="">
-        <div class="footer__line footer__social"><a href="#" class="social-link social-link_inst social-link_text">lingo_pump</a></div>
+    <footer class="footer">
+        <div class="footer__line footer__social"><a href="#"
+                class="social-link social-link_inst social-link_text">lingo_pump</a></div>
         <div class="footer__line"><span>Contact us: <a href="#" class="">support@lingopump.com</a></span></div>
         <div class="footer__line">
             <ul class="copyright">
@@ -387,67 +390,6 @@
             </ul>
         </div>
     </footer>
-
-    <div style="display:none">
-        <img src="./images/french-flag.png" alt="">
-        <img src="./images/german-flag.png" alt="">
-        <img src="./images/spanish-flag.png" alt="">
-        <img src="./images/italh-flag.png" alt="">
-        <img src="./images/italh-flag.png" alt="">
-        <img src="./images/engl-flag.png" alt="">
-        <img src="./images/port-flag.png" alt="">
-        <img src="./images/friends/lisa.png" alt="">
-        <img src="./images/friends/mark.png" alt="">
-        <img src="./images/friends/matt.png" alt="">
-        <img src="./images/friends/rebecca.png" alt="">
-        <img src="./images/friends/nikki.png" alt="">
-        <img src="./images/friends/nicole-2.png" alt="">
-        <img src="./images/friends/Sabrina.png" alt="">
-        <img src="./images/friends/maria-2.png" alt="">
-        <img src="./images/friends/benjamin.png" alt="">
-        <img src="./images/friends/sara.png" alt="">
-        <img src="./images/friends/maria.png" alt="">
-        <img src="./images/friends/steven.png" alt="">
-        <img src="./images/friends/julien.png" alt="">
-        <img src="./images/friends/emma.png" alt="">
-        <img src="./images/friends/gregori.png" alt="">
-        <img src="./images/friends/sara-2.png" alt="">
-        <img src="./images/friends/francesco.png" alt="">
-        <img src="./images/friends/giulia.png" alt="">
-        <img src="./images/friends/marzia.png" alt="">
-        <img src="./images/friends/susanna.png" alt="">
-        <img src="./images/friends/francine.png" alt="">
-        <img src="./images/friends/elena.png" alt="">
-        <img src="./images/friends/nicole.png" alt="">
-        <img src="./images/friends/cesar.png" alt="">
-        <img src="./images/friends/maria-luisa.png" alt="">
-        <img src="./images/friends/montse.png" alt="">
-        <img src="./images/friends/debora.png" alt="">
-        <img src="./images/friends/sara-2.png" alt="">
-        <img src="./images/friends/kaya.png" alt="">
-        <img src="./images/friends/mafalda.png" alt="">
-        <audio><source src="./audio/adrienne.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/benjamin.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/cris.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/francesco.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/guilia.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/isadora.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/julien.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/lisa.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/maria.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/maria-luisa-2.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/maria-luisa-a0.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/mark.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/marzia.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/montse-2.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/montse-a0.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/nicole.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/nicole-riederer.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/rafael.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/sabrina.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/sara.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/shamima.mp3" type="audio/mp3"></audio>
-        <audio><source src="./audio/steven.mp3" type="audio/mp3"></audio>
-    </div>
 </body>
+
 </html>

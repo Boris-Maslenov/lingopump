@@ -112,7 +112,7 @@
             "2": "vital value"
         },
         "result": "In a month you will diversify your German and you'll be able to maintain a conversation on any topics",
-        "photo": "assets/img/Sabrina.png",
+        "photo": "assets/img/sabrina.png",
         "msg": "A girl who tries herself in all areas of life",
         "audio": "assets/audio/sabrina.mp3"
     },
