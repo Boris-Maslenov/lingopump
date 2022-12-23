@@ -270,12 +270,14 @@ html, body {
     @media (max-width: $md) {
         display: flex;
         flex-direction: column;
+        position: relative;
      }
 }
 
 
 .squre {
     position: absolute;
+    top:0;
     z-index: 0;
     height: 100%;
     width: 174px;
@@ -293,18 +295,22 @@ html, body {
             text-align: center;
             display: flex;
             align-items: center;
-            -webkit-box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
-            -moz-box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
             box-shadow: 17px 20px 60px 21px rgba(151, 180, 217, 0.2);
             opacity: 0.4;
         }
 
         &_left {
-            left:0
+            left: calc(50vw/8);
+            @media (max-width: $xxl) {
+                left: calc(-50vw/8);
+            }
         }
 
         &_right {
-            right:0
+            right: calc(50vw/8);
+            @media (max-width: $xxl) {
+                right: calc(-50vw/8);
+            }
         }
 }
 
@@ -315,13 +321,13 @@ html, body {
 
 .squre_left .squre__item:nth-child(2){
     top: 50%;
-    transform: translate(10%, -50%);
+    transform: translate(10%, -115%);
 
 }
 
 .squre_left .squre__item:nth-child(3){
     bottom:40px;
-    transform: translate(100%, 0);
+    transform: translate(100%, -120%);
 }
 
 .squre_right .squre__item:nth-child(1){
@@ -331,12 +337,12 @@ html, body {
 
 .squre_right .squre__item:nth-child(2){
     top: 50%;
-    transform: translate(-10%, -50%);
+    transform: translate(-10%, -115%);
 }
 
 .squre_right .squre__item:nth-child(3){
     bottom:40px;
-    transform: translate(-100%, 0);
+    transform: translate(-100%, -120%);
 }
 
 
@@ -352,7 +358,6 @@ html, body {
             font-weight: 500;
             font-size: 24px;
             padding: 12px 0 12px 0;
-
             order: 0;
         }
 }
@@ -429,6 +434,7 @@ html, body {
     display: flex;
     padding-top: 20px;
     position: relative;
+    z-index: 1;
     justify-content: center;
         // &__top {
         //     position: absolute;
