@@ -1192,6 +1192,10 @@ html, body {
             }
             &_active{
                 color:$color-red;
+                text-decoration: underline;
+            }
+            @media (max-width: $sm) {
+                margin: 0 4px;
             }
     }
 }
@@ -1207,6 +1211,7 @@ html, body {
         line-height: 1.5;
             &_active{
                 color:$color-red;
+                text-decoration: underline;
                 // font-weight: 600;
             }
     }
@@ -1531,6 +1536,9 @@ html, body {
         padding: 13px 0 13px 10px;
         position: relative;
         background-color: #FFF;
+            &::placeholder {
+               opacity: 0;
+            }
             &_option {
                 background: #fff;
                 appearance: none;
@@ -1539,6 +1547,9 @@ html, body {
             }
             @media (max-width: $md) {
                 max-width: 100%;
+                // &::placeholder {
+                //     opacity: 1;
+                //  }
             }
     }
 
@@ -1546,6 +1557,9 @@ html, body {
         color: #38475d;
         font-size: 18px;
         line-height: 1.5;
+            @media (max-width: $md) {
+                    // display: none;
+            }
 
     }
 
