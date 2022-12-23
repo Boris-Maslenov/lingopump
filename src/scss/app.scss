@@ -436,10 +436,6 @@ html, body {
     position: relative;
     z-index: 1;
     justify-content: center;
-        // &__top {
-        //     position: absolute;
-        //     top:0;
-        // }
         &__main-img{
             display: block;
                 &_mobile-size{
@@ -689,10 +685,13 @@ html, body {
 
 // PRESENTATION
 
-.presentation{
-    background: linear-gradient(180deg, #fafafc 0%, #edf3fa 100%);
+.presentation {
+    background:  linear-gradient(180deg, #fafafc 0%, #edf3fa 100%);
     position: relative;
     padding: 120px 0 50px 0;
+        &__container{
+            background: url(../images/words.png) no-repeat 75% 50%; 
+        }
         @media (max-width: $md) {
             padding: 70px 0 50px 0;
         }
